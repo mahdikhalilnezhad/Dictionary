@@ -11,6 +11,7 @@ namespace Dictionary
 {
     internal class dictionary
     {
-        sqlconn
+        SqlConnection conn = new SqlConnection();
+
     }
 }
