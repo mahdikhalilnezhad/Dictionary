@@ -52,6 +52,7 @@
             this.txtEnglishWord.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtEnglishWord.Size = new System.Drawing.Size(190, 23);
             this.txtEnglishWord.TabIndex = 1;
+            this.txtEnglishWord.TextChanged += new System.EventHandler(this.txtEnglishWord_TextChanged);
             // 
             // txtTranslate
             // 
@@ -72,12 +73,19 @@
             // 
             // dataGridView_EnglishWord
             // 
+            this.dataGridView_EnglishWord.AllowUserToAddRows = false;
+            this.dataGridView_EnglishWord.AllowUserToDeleteRows = false;
             this.dataGridView_EnglishWord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_EnglishWord.Location = new System.Drawing.Point(314, 74);
             this.dataGridView_EnglishWord.Name = "dataGridView_EnglishWord";
+            this.dataGridView_EnglishWord.ReadOnly = true;
+            this.dataGridView_EnglishWord.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridView_EnglishWord.RowTemplate.Height = 25;
+            this.dataGridView_EnglishWord.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView_EnglishWord.Size = new System.Drawing.Size(190, 263);
             this.dataGridView_EnglishWord.TabIndex = 4;
+            this.dataGridView_EnglishWord.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_EnglishWord_CellContentClick);
+            this.dataGridView_EnglishWord.CurrentCellChanged += new System.EventHandler(this.dataGridView_EnglishWord_CurrentCellChanged);
             // 
             // Form1
             // 
@@ -93,6 +101,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "دیکشنری";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EnglishWord)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
